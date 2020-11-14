@@ -10,16 +10,24 @@ const buttonWidth = screen.width / 4
 
 const Button = (props) => {
 	const buttonStyles = [styles.button];
+	const textStyles = [styles.text];
 
  	if (props.size === 'double') {
     	buttonStyles.push(styles.buttonDouble);
  	}
 
+ 	if (props.theme === 'secondary') {
+    	buttonStyles.push(styles.buttonSecondary);
+    	textStyles.push(styles.textSecondary);
+  	} else if (props.theme === 'accent') {
+    	buttonStyles.push(styles.buttonAccent);
+  	}
+
  	return(
 		<TouchableOpacity 
 			onPress={props.onPress}
 			style={buttonStyles}>
-			<Text style={styles.text}>{props.text}</Text>
+			<Text style={textStyles}>{props.text}</Text>
 		</TouchableOpacity>
 	)
 }
@@ -40,10 +48,19 @@ const styles = StyleSheet.create({
 		color: 'white',
 		fontSize: 25,
 	},
+	textSecondary : {
+		color: '#060606'
+	},
 	buttonDouble: {
 		flex: 0,
 		width: screen.width / 2 - 10,
 		alignItems: 'flex-start',
 		paddingLeft: 40,
+	},
+	buttonSecondary: {
+		backgroundColor: '#a6a6a6'
+	},
+	buttonAccent: {
+		backgroundColor: '#f09a36'
 	}
 })

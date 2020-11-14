@@ -18,37 +18,37 @@ class App extends React.Component {
           <StatusBar barStyle="light-content"/>
           <Text style={styles.text}>78</Text>
            <Row>
-            <Button text="C" onPress={() => alert('TODO')} />
-            <Button text="+/-" onPress={() => alert('TODO')} />
-            <Button text="%" onPress={() => alert('TODO')} />
-            <Button text="/" onPress={() => alert('TODO')} />
+            <Button theme="secondary" text="C" onPress={() => alert('TODO')} />
+            <Button theme="secondary" text="+/-" onPress={() => alert('TODO')} />
+            <Button theme="secondary" text="%" onPress={() => alert('TODO')} />
+            <Button theme="accent" text="/" onPress={() => alert('TODO')} />
           </Row>
 
           <Row>
             <Button text="7" onPress={() => alert('TODO')} />
             <Button text="8" onPress={() => alert('TODO')} />
             <Button text="9" onPress={() => alert('TODO')} />
-            <Button text="x" onPress={() => alert('TODO')} />
+            <Button theme="accent" text="x" onPress={() => alert('TODO')} />
           </Row>
 
           <Row>
             <Button text="4" onPress={() => alert('TODO')} />
             <Button text="5" onPress={() => alert('TODO')} />
             <Button text="6" onPress={() => alert('TODO')} />
-            <Button text="-" onPress={() => alert('TODO')} />
+            <Button theme="accent" text="-" onPress={() => alert('TODO')} />
           </Row>
 
           <Row>
             <Button text="1" onPress={() => alert('TODO')} />
             <Button text="2" onPress={() => alert('TODO')} />
             <Button text="3" onPress={() => alert('TODO')} />
-            <Button text="+" onPress={() => alert('TODO')} />
+            <Button theme="accent" text="+" onPress={() => alert('TODO')} />
           </Row>
 
           <Row>
             <Button text="0" size="double" onPress={() => alert('TODO')} />
             <Button text="." onPress={() => alert('TODO')} />
-            <Button text="=" onPress={() => alert('TODO')} />
+            <Button theme="accent" text="=" onPress={() => alert('TODO')} />
           </Row>
         </SafeAreaView>
       </View>
