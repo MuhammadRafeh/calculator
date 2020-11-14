@@ -1,114 +1,73 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
 import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
   View,
-  Text,
-  StatusBar,
-} from 'react-native';
+  Text, 
+  StyleSheet, 
+  SafeAreaView,
+  StatusBar
+  } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import Row from './components/Row'
+import Button from './components/Button'
 
-const App: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
-  );
-};
+class App extends React.Component {
+  render() {
+    return(
+      <View style={styles.container}>
+        <SafeAreaView>
+          <StatusBar barStyle="light-content"/>
+          <Text style={styles.text}>78</Text>
+           <Row>
+            <Button text="C" onPress={() => alert('TODO')} />
+            <Button text="+/-" onPress={() => alert('TODO')} />
+            <Button text="%" onPress={() => alert('TODO')} />
+            <Button text="/" onPress={() => alert('TODO')} />
+          </Row>
+
+          <Row>
+            <Button text="7" onPress={() => alert('TODO')} />
+            <Button text="8" onPress={() => alert('TODO')} />
+            <Button text="9" onPress={() => alert('TODO')} />
+            <Button text="x" onPress={() => alert('TODO')} />
+          </Row>
+
+          <Row>
+            <Button text="4" onPress={() => alert('TODO')} />
+            <Button text="5" onPress={() => alert('TODO')} />
+            <Button text="6" onPress={() => alert('TODO')} />
+            <Button text="-" onPress={() => alert('TODO')} />
+          </Row>
+
+          <Row>
+            <Button text="1" onPress={() => alert('TODO')} />
+            <Button text="2" onPress={() => alert('TODO')} />
+            <Button text="3" onPress={() => alert('TODO')} />
+            <Button text="+" onPress={() => alert('TODO')} />
+          </Row>
+
+          <Row>
+            <Button text="0" size="double" onPress={() => alert('TODO')} />
+            <Button text="." onPress={() => alert('TODO')} />
+            <Button text="=" onPress={() => alert('TODO')} />
+          </Row>
+        </SafeAreaView>
+      </View>
+    )
+  }
+}
+
+export default App
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  container: {
+    flex: 1,
+    backgroundColor: 'black',
+    justifyContent: 'flex-end'
   },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
+  text: {
+    color: 'white',
+    fontSize: 25,
     textAlign: 'right',
-  },
-});
-
-export default App;
+    marginRight: 20
+  }
+})
