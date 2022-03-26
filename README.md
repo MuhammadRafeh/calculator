@@ -1,9 +1,11 @@
 # Calculator
 React Native based calculator app for calculating basic operations like DMAS
 
+## Preview
+
 <p float="left">
-    <img src="https://i.imgur.com/tjcdkID.jpg" width="49%" />
-    <img src="https://i.imgur.com/pbR10Ci.jpg" width="49%" />
+    <img src="https://i.imgur.com/tjcdkID.jpg" width="28%" />
+    <img src="https://i.imgur.com/pbR10Ci.jpg" width="28%" />
 </p>
 
 ## Steps
